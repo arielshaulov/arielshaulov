@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ariel Shaulov</title>
+  <style>
+    body {
+      margin: 0;
+      background: #ffffff;
+      color: #000000;
+      font-family: "Courier New", Courier, monospace;
+    }
+
+    .page {
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 768px;
+      margin: 0 auto;
+      padding: 64px 24px;
+    }
+
+    h1 {
+      font-size: 48px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin: 0;
+    }
+
+    h2 {
+      font-size: 18px;
+      font-weight: 500;
+      margin: 0;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .intro {
+      margin-top: 24px;
+      font-size: 18px;
+      line-height: 1.75;
+      color: #404040;
+    }
+
+    .intro + .intro {
+      margin-top: 24px;
+    }
+
+    .links {
+      margin-top: 32px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 20px;
+      font-size: 14px;
+      color: #525252;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    .research {
+      margin-top: 64px;
+    }
+
+    .paper-list {
+      margin-top: 24px;
+    }
+
+    .paper {
+      margin-bottom: 16px;
+    }
+
+    .paper-title {
+      font-size: 16px;
+      font-weight: 500;
+      color: #000000;
+    }
+
+    .paper-authors {
+      font-size: 14px;
+      color: #404040;
+      margin-top: 4px;
+    }
+
+    .paper-subtitle {
+      font-size: 14px;
+      color: #525252;
+      margin-top: 2px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 48px 20px;
+      }
+
+      h1 {
+        font-size: 36px;
+      }
+
+      .intro {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="container">
+      <h1>Ariel Shaulov</h1>
+
+      <p class="intro">
+        I'm a phd student advised by professor
+        <a href="https://www.cs.tau.ac.il/~wolf/" target="_blank" rel="noopener noreferrer">Lior Wolf</a>
+        at Tel Aviv University, working on computer vision and video generation.
+        I'm also a researcher at
+        <a href="https://www.menteebot.com/" target="_blank" rel="noopener noreferrer">Mentee Robotics</a>
+        working on dexterous manipulation.
+      </p>
+
+      <p class="intro">
+        My work focuses on inference time optimization for generative models.
+      </p>
+
+      <div class="links">
+        <a href="mailto:arielshaulo@gmail.com">Email</a>
+        <a href="https://github.com/arielshaulov" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://scholar.google.com/citations?user=A31XmP0AAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+        <a href="https://x.com/ariel__shaulov" target="_blank" rel="noopener noreferrer">X</a>
+      </div>
+
+      <section class="research">
+        <h2>Research</h2>
+
+        <div class="paper-list">
+          <div class="paper">
+            <a class="paper-title" href="https://arxiv.org/pdf/2603.06311" target="_blank" rel="noopener noreferrer">
+              Latent Transfer Attack
+            </a>
+            <p class="paper-authors">E Shaar*, A Shaulov*, Y Zur, G Chechik, R Ziv</p>
+            <p class="paper-subtitle">Project Page</p>
+          </div>
+
+          <div class="paper">
+            <a class="paper-title" href="https://arxiv.org/pdf/2602.00268" target="_blank" rel="noopener noreferrer">
+              TokenTrim
+            </a>
+            <p class="paper-authors">A Shaulov, E Shaar, A Edenzon, L Wolf</p>
+            <p class="paper-subtitle">Project Page</p>
+          </div>
+
+          <div class="paper">
+            <a class="paper-title" href="https://arxiv.org/pdf/2506.01144?" target="_blank" rel="noopener noreferrer">
+              FlowMo
+            </a>
+            <p class="paper-authors">A Shaulov*, I Hazan*, L Wolf, H Chefer</p>
+            <p class="paper-subtitle">NeurIPS 2025</p>
+          </div>
+
+          <div class="paper">
+            <a class="paper-title" href="https://openaccess.thecvf.com/content/CVPR2025/papers/Shaar_Adapting_to_the_Unknown_Training-Free_Audio-Visual_Event_Perception_with_Dynamic_CVPR_2025_paper.pdf" target="_blank" rel="noopener noreferrer">
+              Adapting to the Unknown
+            </a>
+            <p class="paper-authors">E Shaar*, A Shaulov*, G Chechik, L Wolf</p>
+            <p class="paper-subtitle">CVPR 2025</p>
+          </div>
+
+          <div class="paper">
+            <a class="paper-title" href="https://arxiv.org/pdf/2501.03183" target="_blank" rel="noopener noreferrer">
+              Classifier-Guided Captioning Across Modalities
+            </a>
+            <p class="paper-authors">A Shaulov, T Shaharabany*, E Shaar, G Chechik, L Wolf</p>
+            <p class="paper-subtitle">ICASSP 2025</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
