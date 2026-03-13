@@ -131,6 +131,24 @@
       color: var(--muted);
     }
 
+    .contact-email {
+      margin-top: 22px;
+      font-size: 14px;
+      color: #44506a;
+    }
+
+    .contact-email-key {
+      display: inline-block;
+      margin-top: 6px;
+      padding: 6px 10px;
+      border-radius: 8px;
+      border: 1px solid #cfd9ea;
+      background: #f4f7fc;
+      color: #1e2f52;
+      font-family: "Courier New", Courier, monospace;
+      letter-spacing: 0.01em;
+    }
+
     .links a {
       text-decoration: none;
       padding: 6px 11px;
@@ -190,10 +208,27 @@
       text-decoration-thickness: 1px;
     }
 
-    .paper-authors {
+    .paper-meta {
       margin-top: 4px;
+      display: flex;
+      align-items: baseline;
+      gap: 24px;
+    }
+
+    .paper-authors {
+      margin-top: 0;
       font-size: 14px;
       color: var(--muted);
+      flex: 1;
+      min-width: 0;
+    }
+
+    .paper-venue {
+      margin: 0;
+      padding-left: 28px;
+      font-size: 13px;
+      color: #5f6b81;
+      white-space: nowrap;
     }
 
     .paper-subtitle {
@@ -228,6 +263,14 @@
       .research h2 {
         font-size: 18px;
       }
+
+      .paper-meta {
+        gap: 12px;
+      }
+
+      .paper-venue {
+        padding-left: 0;
+      }
     }
   </style>
 </head>
@@ -252,10 +295,15 @@
         My work focuses on inference time optimization for generative models.
       </p>
 
+      <p class="contact-email">
+        Email
+        <span class="contact-email-key">arielshaulov@mail.tau.ac.il</span>
+      </p>
+
       <div class="links">
-        <a href="mailto:arielshaulo@gmail.com">Email</a>
         <a href="https://github.com/arielshaulov" target="_blank" rel="noopener noreferrer">GitHub</a>
         <a href="https://scholar.google.com/citations?user=A31XmP0AAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+        <a href="https://www.linkedin.com/in/ariel-shaulov-5989942a6/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         <a href="https://x.com/ariel__shaulov" target="_blank" rel="noopener noreferrer">X</a>
       </div>
 
@@ -267,40 +315,59 @@
             <a class="paper-title" href="https://arxiv.org/pdf/2603.06311" target="_blank" rel="noopener noreferrer">
               Latent Transfer Attack
             </a>
-            <p class="paper-authors">E Shaar*, A Shaulov*, Y Zur, G Chechik, R Ziv</p>
-            <p class="paper-subtitle">Arxiv</p>
+            <div class="paper-meta">
+              <p class="paper-authors">E Shaar*, A Shaulov*, Y Zur, G Chechik, R Ziv</p>
+              <p class="paper-venue">Arxiv</p>
+            </div>
           </div>
 
           <div class="paper">
             <a class="paper-title" href="https://arxiv.org/pdf/2602.00268" target="_blank" rel="noopener noreferrer">
               TokenTrim
             </a>
-            <p class="paper-authors">A Shaulov, E Shaar, A Edenzon, L Wolf</p>
-            <p class="paper-subtitle">Arxiv</p>
+            <div class="paper-meta">
+              <p class="paper-authors">A Shaulov, E Shaar, A Edenzon, L Wolf</p>
+              <p class="paper-venue">Arxiv</p>
+            </div>
+            <p class="paper-subtitle">
+              <a href="https://arielshaulov.github.io/TokenTrim/" target="_blank" rel="noopener noreferrer">Project Page</a>
+            </p>
           </div>
 
           <div class="paper">
             <a class="paper-title" href="https://arxiv.org/pdf/2506.01144?" target="_blank" rel="noopener noreferrer">
               FlowMo
             </a>
-            <p class="paper-authors">A Shaulov*, I Hazan*, L Wolf, H Chefer</p>
-            <p class="paper-subtitle">NeurIPS 2025</p>
+            <div class="paper-meta">
+              <p class="paper-authors">A Shaulov*, I Hazan*, L Wolf, H Chefer</p>
+              <p class="paper-venue">NeurIPS 2025</p>
+            </div>
+            <p class="paper-subtitle">
+              <a href="https://arielshaulov.github.io/FlowMo/" target="_blank" rel="noopener noreferrer">Project Page</a>
+            </p>
           </div>
 
           <div class="paper">
             <a class="paper-title" href="https://openaccess.thecvf.com/content/CVPR2025/papers/Shaar_Adapting_to_the_Unknown_Training-Free_Audio-Visual_Event_Perception_with_Dynamic_CVPR_2025_paper.pdf" target="_blank" rel="noopener noreferrer">
               Adapting to the Unknown
             </a>
-            <p class="paper-authors">E Shaar*, A Shaulov*, G Chechik, L Wolf</p>
-            <p class="paper-subtitle">CVPR 2025</p>
+            <div class="paper-meta">
+              <p class="paper-authors">E Shaar*, A Shaulov*, G Chechik, L Wolf</p>
+              <p class="paper-venue">CVPR 2025</p>
+            </div>
+            <p class="paper-subtitle">
+              <a href="https://eitan159.github.io/AV2A/" target="_blank" rel="noopener noreferrer">Project Page</a>
+            </p>
           </div>
 
           <div class="paper">
             <a class="paper-title" href="https://arxiv.org/pdf/2501.03183" target="_blank" rel="noopener noreferrer">
               Classifier-Guided Captioning Across Modalities
             </a>
-            <p class="paper-authors">A Shaulov, T Shaharabany*, E Shaar, G Chechik, L Wolf</p>
-            <p class="paper-subtitle">ICASSP 2025</p>
+            <div class="paper-meta">
+              <p class="paper-authors">A Shaulov, T Shaharabany*, E Shaar, G Chechik, L Wolf</p>
+              <p class="paper-venue">ICASSP 2025</p>
+            </div>
           </div>
         </div>
       </section>
