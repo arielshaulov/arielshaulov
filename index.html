@@ -5,11 +5,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ariel Shaulov</title>
   <style>
+    :root {
+      --bg: #f6f8fb;
+      --bg-soft: #eef2f8;
+      --fg: #121826;
+      --muted: #4d5b78;
+      --line: #dbe3ef;
+      --accent: #1f6feb;
+      --accent-soft: #dce9ff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      background: #ffffff;
-      color: #000000;
+      background: linear-gradient(180deg, var(--bg-soft) 0%, var(--bg) 220px);
+      color: var(--fg);
       font-family: "Courier New", Courier, monospace;
+      line-height: 1.6;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      z-index: -1;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      filter: blur(54px);
+      opacity: 0.45;
+      pointer-events: none;
+    }
+
+    body::before {
+      top: -120px;
+      right: -80px;
+      background: #c9ddff;
+    }
+
+    body::after {
+      bottom: -120px;
+      left: -90px;
+      background: #d3efe8;
     }
 
     .page {
@@ -17,36 +59,39 @@
     }
 
     .container {
-      max-width: 768px;
-      margin: 0 auto;
-      padding: 64px 24px;
-    }
-
-    h1 {
-      font-size: 48px;
-      font-weight: 600;
-      letter-spacing: -0.02em;
-      margin: 0;
+      max-width: 760px;
+      margin: 32px auto;
+      padding: 72px 24px;
+      background: rgba(255, 255, 255, 0.82);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      backdrop-filter: blur(3px);
+      box-shadow: 0 18px 44px rgba(16, 24, 40, 0.07);
     }
 
     .name-row {
       display: inline-flex;
       align-items: center;
-      gap: 16px;
+      gap: 14px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 44px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.05;
+      color: #0f172a;
     }
 
     .name-avatar {
-      width: 84px;
-      height: 84px;
+      width: 88px;
+      height: 88px;
       border-radius: 50%;
       object-fit: cover;
+      border: 2px solid var(--accent-soft);
+      box-shadow: 0 8px 20px rgba(31, 111, 235, 0.22);
       display: block;
-    }
-
-    h2 {
-      font-size: 18px;
-      font-weight: 500;
-      margin: 0;
     }
 
     p {
@@ -54,81 +99,134 @@
     }
 
     .intro {
-      margin-top: 24px;
+      margin-top: 22px;
       font-size: 18px;
-      line-height: 1.75;
-      color: #404040;
+      color: var(--muted);
+      max-width: 66ch;
     }
 
     .intro + .intro {
-      margin-top: 24px;
-    }
-
-    .links {
-      margin-top: 32px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px 20px;
-      font-size: 14px;
-      color: #525252;
+      margin-top: 16px;
     }
 
     a {
-      color: inherit;
+      color: var(--accent);
       text-decoration: underline;
-      text-underline-offset: 4px;
+      text-decoration-color: #98b7ee;
+      text-underline-offset: 3px;
+      transition: color 160ms ease, text-decoration-color 160ms ease;
+    }
+
+    a:hover {
+      color: #154ea6;
+      text-decoration-color: #154ea6;
+    }
+
+    .links {
+      margin-top: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 16px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .links a {
+      text-decoration: none;
+      padding: 6px 11px;
+      border-radius: 999px;
+      border: 1px solid #c9daf6;
+      background: #eef4ff;
+      color: #17438d;
+      transition: transform 140ms ease, box-shadow 140ms ease, background-color 140ms ease;
+    }
+
+    .links a:hover {
+      transform: translateY(-1px);
+      background: #e3edff;
+      box-shadow: 0 8px 16px rgba(31, 111, 235, 0.16);
+      text-decoration: none;
     }
 
     .research {
-      margin-top: 64px;
+      margin-top: 56px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
     }
 
     .research h2 {
-      font-size: 24px;
+      margin: 0;
+      font-size: 21px;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      color: #0f2f66;
     }
 
     .paper-list {
-      margin-top: 24px;
+      margin-top: 20px;
+      display: grid;
+      gap: 10px;
     }
 
     .paper {
-      margin-bottom: 16px;
+      margin: 0;
+      padding: 14px 14px;
+      border: 1px solid #d9e3f2;
+      border-radius: 12px;
+      background: #fbfdff;
+      transition: background-color 140ms ease, border-color 140ms ease, transform 140ms ease;
+    }
+
+    .paper:hover {
+      background: #f3f8ff;
+      border-color: #bfd5f7;
+      transform: translateY(-1px);
     }
 
     .paper-title {
       font-size: 16px;
       font-weight: 500;
-      color: #000000;
+      color: #163f86;
+      text-decoration-thickness: 1px;
     }
 
     .paper-authors {
-      font-size: 14px;
-      color: #404040;
       margin-top: 4px;
+      font-size: 14px;
+      color: var(--muted);
     }
 
     .paper-subtitle {
-      font-size: 14px;
-      color: #525252;
       margin-top: 2px;
+      font-size: 14px;
+      color: #686868;
     }
 
     @media (max-width: 768px) {
       .container {
-        padding: 48px 20px;
+        padding: 52px 20px;
+        margin: 0 auto;
+        border-radius: 0;
+        border-left: 0;
+        border-right: 0;
+        box-shadow: none;
       }
 
       h1 {
-        font-size: 36px;
+        font-size: 34px;
       }
 
       .name-avatar {
-        width: 64px;
-        height: 64px;
+        width: 66px;
+        height: 66px;
       }
 
       .intro {
         font-size: 16px;
+      }
+
+      .research h2 {
+        font-size: 18px;
       }
     }
   </style>
@@ -161,8 +259,8 @@
         <a href="https://x.com/ariel__shaulov" target="_blank" rel="noopener noreferrer">X</a>
       </div>
 
-      <section class="research (* denotes equal contribution)">
-        <h2>Research</h2>
+      <section class="research">
+        <h2>Research (* denotes equal contribution)</h2>
 
         <div class="paper-list">
           <div class="paper">
@@ -170,7 +268,7 @@
               Latent Transfer Attack
             </a>
             <p class="paper-authors">E Shaar*, A Shaulov*, Y Zur, G Chechik, R Ziv</p>
-            <p class="paper-subtitle">Project Page</p>
+            <p class="paper-subtitle">Arxiv</p>
           </div>
 
           <div class="paper">
@@ -178,7 +276,7 @@
               TokenTrim
             </a>
             <p class="paper-authors">A Shaulov, E Shaar, A Edenzon, L Wolf</p>
-            <p class="paper-subtitle">Project Page</p>
+            <p class="paper-subtitle">Arxiv</p>
           </div>
 
           <div class="paper">
